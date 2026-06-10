@@ -7,8 +7,9 @@ cask "wattusb" do
   desc "Menu bar app showing live USB-C charging wattage"
   homepage "https://github.com/benlumley/wattusb"
 
-  # App is ad-hoc signed (not notarized). Install with --no-quarantine,
-  # or right-click → Open on first launch.
+  # App is ad-hoc signed (not notarized), so Gatekeeper blocks the first
+  # launch — right-click the app → Open once to approve it, or run:
+  #   xattr -dr com.apple.quarantine /Applications/wattusb.app
   app "wattusb.app"
 
   zap trash: "~/Library/Preferences/com.benlumley.wattusb.plist"
