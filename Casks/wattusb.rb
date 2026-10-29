@@ -10,7 +10,8 @@ cask "wattusb" do
   depends_on macos: :sonoma
 
   # App is ad-hoc signed (not notarized), so Gatekeeper blocks the first
-  # launch — right-click the app → Open once to approve it, or run:
+  # launch — approve it once in System Settings → Privacy & Security → Open
+  # Anyway (macOS 15+), or right-click the app → Open (macOS 14), or run:
   #   xattr -dr com.apple.quarantine /Applications/wattusb.app
   app "wattusb.app"
 

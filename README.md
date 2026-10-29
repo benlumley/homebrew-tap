@@ -14,7 +14,9 @@ brew install --cask benlumley/tap/wattusb
 ```
 
 The app is ad-hoc signed (not notarized), so Gatekeeper blocks the first
-launch. Right-click `wattusb.app` → Open once to approve it, or run:
+launch. Approve it once: on macOS 15 (Sequoia) or later, try to open it, then
+click Open Anyway in System Settings → Privacy & Security; on macOS 14,
+right-click `wattusb.app` → Open. Or run:
 
 ```sh
 xattr -dr com.apple.quarantine /Applications/wattusb.app
