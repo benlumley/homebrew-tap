@@ -14,5 +14,7 @@ cask "wattusb" do
   #   xattr -dr com.apple.quarantine /Applications/wattusb.app
   app "wattusb.app"
 
+  uninstall quit: "com.benlumley.wattusb"
+
   zap trash: "~/Library/Preferences/com.benlumley.wattusb.plist"
 end
