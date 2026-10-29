@@ -7,6 +7,8 @@ cask "wattusb" do
   desc "Menu bar app showing live USB-C charging wattage"
   homepage "https://github.com/benlumley/wattusb"
 
+  depends_on macos: :sonoma
+
   # App is ad-hoc signed (not notarized), so Gatekeeper blocks the first
   # launch — right-click the app → Open once to approve it, or run:
   #   xattr -dr com.apple.quarantine /Applications/wattusb.app
