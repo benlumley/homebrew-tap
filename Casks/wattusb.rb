@@ -1,6 +1,6 @@
 cask "wattusb" do
-  version "0.1.0"
-  sha256 "07f4c5c4859f55e451add87306812dda8c419214d889569d092994d8bad0b06e"
+  version "0.1.1"
+  sha256 "10deb6fc951f4633d2831eba9d2d4bba87c315ce13d9cfa40df5f473eb3e5b38"
 
   url "https://github.com/benlumley/wattusb/releases/download/v#{version}/wattusb-#{version}.zip"
   name "wattusb"
