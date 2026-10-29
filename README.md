@@ -6,15 +6,22 @@ Homebrew tap for my apps.
 
 ### [wattusb](https://github.com/benlumley/wattusb)
 
-Tiny macOS menu bar app showing live USB-C charging wattage.
+Tiny macOS menu bar app showing live USB-C charging wattage. Requires macOS 14
+(Sonoma) or later.
 
 ```sh
-brew install --cask --no-quarantine benlumley/tap/wattusb
+brew install --cask benlumley/tap/wattusb
 ```
 
-`--no-quarantine` is needed because the app is ad-hoc signed (not notarized).
-Without it, Gatekeeper blocks the first launch — you can instead right-click
-the app → Open once to approve it.
+The app is ad-hoc signed (not notarized), so Gatekeeper blocks the first
+launch. Right-click `wattusb.app` → Open once to approve it, or run:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/wattusb.app
+```
+
+Open at Login is on by default the first time the app runs; untick it in the
+menu to turn it off.
 
 To update or remove:
 
